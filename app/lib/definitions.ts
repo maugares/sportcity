@@ -1,4 +1,4 @@
-export type Club = {
+export type RawClub = {
   id: string;
   name: string;
   address: string;
@@ -25,6 +25,20 @@ export type Club = {
       },
     ];
   };
+};
+
+export type Club = {
+  id: string;
+  name: string;
+  address: string;
+  city: string;
+  postalCode: string;
+  latitude: number;
+  longitude: number;
+  slug: string;
+  intro?: string;
+  description?: string;
+  highlightedAttributes?: [{ name: string; title: string; icon: string }];
 };
 
 export type Lesson = {
